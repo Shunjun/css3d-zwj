@@ -1,12 +1,11 @@
 import setTransform from "./utils/setTransform";
 import { getPosition, getRotate } from "./utils/getTransform";
 import { getImageScale } from "./utils/getImageScale";
+import "./index.css";
 
 (async function () {
   const rootEle = document.getElementById("root");
 
-  // const PUBLICPATH = "/css3d-zwj/";
-  // const PUBLICPATH = "/";
   const SLICES_COUNT = 20;
   const SLICES_WIDTH = 100;
   const DGE = Math.PI / 180;
@@ -15,7 +14,7 @@ import { getImageScale } from "./utils/getImageScale";
   // 物体距离
   const CAMERA_DISTENCE = 600;
 
-  const slicesWidthScale = await getImageScale(`/css3d-zwj/images/p0.png`);
+  const slicesWidthScale = await getImageScale(require("./images/p0.png"));
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   let distance;
@@ -50,7 +49,7 @@ import { getImageScale } from "./utils/getImageScale";
       div.style.width = `${SLICES_WIDTH}px`;
       div.style.height = `${SLICES_WIDTH / slicesWidthScale}px`;
 
-      div.style.backgroundImage = `url("/css3d-zwj/images/p${i}.png")`;
+      div.style.backgroundImage = `url("${require(`./images/p${i}.png`)}")`;
       const [x, z] = getPosition(distance, SLICES_COUNT, i);
       const r = getRotate(SLICES_COUNT, i);
       setTransform(div, {

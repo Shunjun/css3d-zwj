@@ -7,7 +7,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-image: url("/css3d-zwj/images/bg.jpg");
+  background-image: url("./images/bg.jpg");
   background-size: cover;
 }
 
@@ -38,4 +38,6 @@
   position: absolute;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
