@@ -6,8 +6,9 @@ module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "index.bundle.js",
+    publicPath: "/css3d-zwj/",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,7 +19,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
     publicPath: "/",
