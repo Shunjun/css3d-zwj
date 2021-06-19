@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+}
+
+.camrea {
+  position: absolute;
+  overflow: hidden;
+  transform-style: flat;
+  perspective: 900px;
+}
+
+.container {
+  position: absolute;
+  transform-origin: 50% 50% 0px;
+  display: block;
+  transform-style: preserve-3d;
+}
+
+.box {
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 0px;
+}
+
+.slices {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
