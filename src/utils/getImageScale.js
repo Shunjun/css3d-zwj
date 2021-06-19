@@ -8,7 +8,6 @@ export function getImageScale(url) {
     const img = new Image();
     img.src = url;
     img.onload = () => {
-      console.log(img.width, img.height);
       resolve(img.width / img.height);
     };
   });
