@@ -15,7 +15,7 @@ import { getImageScale } from "./utils/getImageScale";
   // 物体距离
   const CAMERA_DISTENCE = 600;
 
-  const slicesWidthScale = await getImageScale(`/123123/images/p0.png`);
+  const slicesWidthScale = await getImageScale(`/css3d-zwj/images/p0.png`);
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   let distance;
@@ -50,7 +50,7 @@ import { getImageScale } from "./utils/getImageScale";
       div.style.width = `${SLICES_WIDTH}px`;
       div.style.height = `${SLICES_WIDTH / slicesWidthScale}px`;
 
-      div.style.backgroundImage = `url("/123123/images/p${i}.png")`;
+      div.style.backgroundImage = `url("/css3d-zwj/images/p${i}.png")`;
       const [x, z] = getPosition(distance, SLICES_COUNT, i);
       const r = getRotate(SLICES_COUNT, i);
       setTransform(div, {
