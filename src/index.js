@@ -5,8 +5,8 @@ import { getImageScale } from "./utils/getImageScale";
 (async function () {
   const rootEle = document.getElementById("root");
 
-  // const PUBLICPATH = "/css3d-zwj/";
-  const PUBLICPATH = "/";
+  const PUBLICPATH = "/css3d-zwj/";
+  // const PUBLICPATH = "/";
   const SLICES_COUNT = 20;
   const SLICES_WIDTH = 100;
   const DGE = Math.PI / 180;
